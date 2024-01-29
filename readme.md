@@ -10,8 +10,12 @@ pattern_extractor_svc/
 ├── tests/
 │   └── test_app.py
 │
+├── .gitignore
+├── deployment.yaml
+├── Dockerfile
+├── readme.md
 ├── requirements.txt
-└── Dockerfile
+└── service.yaml
 ```
 
 ### Pré-requisitos
@@ -48,7 +52,7 @@ Para fazer o deploy no Minikube:
    kubectl apply -f service.yaml
    ```
 
-3. **Verificando o Estado**:
+3. **Verificando o Estado (opcional)**:
    Você pode verificar o estado do Deployment e do Service usando:
 
    ```bash

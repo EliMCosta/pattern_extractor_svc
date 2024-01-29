@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pattern-extractor-svc
+spec:
+  replicas: 2  # Número desejado de instâncias do microsserviço
+  selector:
+    matchLabels:
+      app: pattern-extractor
+  template:
+    metadata:
+      labels:
+        app: pattern-extractor
+    spec:
+      containers:
+      - name: pattern-extractor
+        image: pattern_extractor_svc:latest  # Substitua com a tag apropriada
+        imagePullPolicy: Never  # Configurar para "Never" para usar a imagem local em vez de baixar
+        ports:
+        - containerPort: 8000  # A porta em que o microsserviço escuta
+        resources:
+          requests:
+            memory: "64Mi"  # Solicitação mínima de memória
+            cpu: "250m"  # Solicitação mínima de CPU (250 milicores, ou 0.25 de um core de CPU)
+          limits:
+            memory: "128Mi"  # Limite máximo de memória
+            cpu: "500m"  # Limite máximo de CPU (500 milicores, ou 0.5 de um core de CPU)

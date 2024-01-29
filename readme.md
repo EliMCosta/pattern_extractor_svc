@@ -1,4 +1,4 @@
-## Microsserviço Python para Extração de Entidades Nomeadas (pattern)
+## Microsserviço Python para Extração de Padrões
 
 ### Estrutura do Projeto
 ```

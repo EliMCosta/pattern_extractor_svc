@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: pattern-extractor-svc
 spec:
-  type: NodePort  # Expõe o serviço fora do cluster usando uma porta no nodo
+  type: ClusterIP
   selector:
     app: pattern-extractor
   ports:

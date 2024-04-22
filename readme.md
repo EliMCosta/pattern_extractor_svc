@@ -12,6 +12,7 @@ pattern_extractor_svc/
 │
 ├── .gitignore
 ├── deployment.yaml
+├── ingress.yaml
 ├── Dockerfile
 ├── readme.md
 ├── requirements.txt
